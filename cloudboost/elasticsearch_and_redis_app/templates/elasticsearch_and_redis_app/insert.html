@@ -1,0 +1,16 @@
+<h1>Give me a message :)</h1>
+
+
+<form action="{% url 'elasticsearch_and_redis_app:index' %}" method="post">
+{% csrf_token %}
+<label>Give me a message :</label><br>
+<input type="text" name="message" value="default"><br>
+<input type="submit" value="Submit" />
+</form>
+
+<form action="{% url 'elasticsearch_and_redis_app:index' %}" method="get">
+{% csrf_token %}
+<label>Search a value from Redis(Provide an index)</label><br>
+<input type="text" name="index" value="1"><br>
+<input type="submit" value="Submit" />
+</form>

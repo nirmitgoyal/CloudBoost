@@ -4,7 +4,7 @@ from django.utils.encoding import python_2_unicode_compatible
 @python_2_unicode_compatible
 
 
-class Books(models.Model):
+class Books(models.Model): #but no need further to make this model
     # book_id = models.IntegerField()
     name = models.CharField(max_length=200)
     author = models.CharField(max_length=100)
